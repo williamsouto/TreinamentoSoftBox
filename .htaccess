@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	
+	RewriteCond %{SCRIPT_FILENAME} !-f
+	RewriteCond %{SCRIPT_FILENAME} !-d
+	
+	RewriteRule ^([a-zA-Z]+)([/?]*)([a-zA-Z0-9-]*)([/?]*)([0-9]*)/?$ index.php?page=$1&action=$3&id=$5 [NC,L,QSA]
+	# RewriteRule ^([\w]*)$ index.php?page=$1 [NC,L]
+	
+</IfModule>

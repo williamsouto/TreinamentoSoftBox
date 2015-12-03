@@ -1,0 +1,26 @@
+<section>
+	<div class="bg-body">
+		<div class="container-fluid">
+			<div class="row">
+				<?php echo $this->mensagem; ?>
+				<div class="col-md-6 col-sm-4">
+					<div class="form-group">
+						<label for="drpTipo">Tipo</label> <select id="drpTipo" class="form-control" required>
+							<option value="T">Todos</option>
+							<option value="R">Receita</option>
+							<option value="D">Despesa</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-4">
+					<div class="form-group">
+						<button class="btn btn-primary pull-right btn-pesquisar">Buscar</button>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div id="relatorio"></div>
+			</div>
+		</div>
+	</div>
+</section>

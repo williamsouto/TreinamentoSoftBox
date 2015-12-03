@@ -1,0 +1,91 @@
+<section>
+	<div class="bg-body">
+		<div class="container-fluid" id="conteudo">
+			<div class="row">
+				<!-- Mensagem -->
+				<?php echo $this->mensagem; ?>
+				
+				<div class="col-lg-12">
+					<div class="panel panel-inverse">
+						<div class="panel-heading">Cadastro de Lan&ccedil;amento</div>
+						<div class="panel-body">
+							<div class="col-lg-12">
+								<form method="POST" id="cadastroLancamento">
+									<input type="hidden" name="codLancamento" id="hdIdLanc" value=""> <input type="hidden" name="operacao" id="hdOperacao" value="Novo">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="drpCategoria">Categoria</label> <select id="drpCategoria" class="form-control" required>
+															<?php echo $categorias?>
+														</select>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="drpTipo">Tipo</label> <select id="drpTipo" class="form-control" required>
+													<option value="">Selecione...</option>
+													<option value="R">Receita</option>
+													<option value="D">Despesa</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+
+												<label for="txtValor">Valor</label> <input type="text" id="txtValor" data-thousands="," data-decimal="," placeholder="R$" class="form-control" required>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="dtLancamento">Data</label> <input type="text" id="dtLancamento" class="form-control" required>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label for="drpAluno">Descri&ccedil;&atilde;o</label>
+												<textarea class="form-control" id="txtDescricao" name="txtDescricao" cols="40" rows="3" required></textarea>
+											</div>
+										</div>
+									</div>
+									<button type="submit" class="btn btn-success" id="btnSalvar" value="">Salvar</button>
+									<button type='reset' class="btn btn-default" id="btnLimpar">Limpar Campos</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-inverse">
+				<div class="panel-heading">
+					Lan&ccedil;amentos<a href="#collapseExample" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-angle-double-up pull-right"></i></a>
+				</div>
+				<div class="panel-body" class="collapse" id="collapseExample">
+					<div class="row">
+						<div class="col-lg-12">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>Categoria</th>
+										<th>Tipo</th>
+										<th>Valor</th>
+										<th>Data</th>
+										<th>Descri&ccedil;&atilde;o</th>
+										<th>A&ccedil;&otilde;es</th>
+									</tr>
+								</thead>
+								<tbody id='lancamentos'>
+									<?php echo $lancamentos; ?>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

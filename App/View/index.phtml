@@ -1,0 +1,52 @@
+<section>
+	<div class="bg-body">
+		<div class="container-fluid">
+			<!-- Mensagem -->
+			<?php echo $this->mensagem; ?>
+
+			<!-- Banners -->
+			<div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="panel banner-green" id="banner">
+						<div class="banner-content">
+							<i class="fa fa-thumbs-o-up fa-5x"></i> <span>Receitas</span>
+							<p><?php echo "R$ " . $receitas; ?></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="panel banner-red" id="banner">
+						<div class="banner-content">
+							<i class="fa fa-thumbs-o-down fa-5x"></i> <span>Despesas</span>
+							<p><?php echo "R$ " . $despesas; ?></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="panel banner-blue" id="banner">
+						<div class="banner-content">
+							<i class="fa fa-pie-chart fa-5x"></i><span>Total</span>
+							<p><?php echo "R$ " . $total; ?></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="panel banner-yellow" id="banner">
+						<div class="banner-content">
+							<i class="fa fa-sort-amount-desc fa-5x"></i> <span>Lan&ccedil;amentos</span>
+							<p><?php echo "R$ " . $quantidade; ?></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Fim Banners -->
+
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<div id="chart"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>

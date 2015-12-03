@@ -1,0 +1,42 @@
+<section>
+	<div class="bg-body">
+		<div class="container-fluid">
+			<!-- Mensagem -->
+			<?php echo $this->mensagem; ?>
+			
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="panel widget">
+						<div class="list-group-item head-widget">
+							<span><i class="fa fa-tasks"></i> Categorias</span>
+						</div>
+						<div class="list-group categorias">
+							<?php echo $categorias; ?>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<i class="fa fa-pencil-square-o"></i> Cadastro de categoria
+						</div>
+						<div class="panel-body">
+							<form method="post" id="cadastroCategoria">
+								<input type="hidden" name="operacao" id="hdOperacao" value="Novo"> <input type="hidden" name="codCategoria" id="hdCodCategoria" value="">
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="form-group">
+											<label>Nome</label> <input type="text" class="form-control" placeholder="Informe o nome da categoria..." id="txtNomeCategoria" max="30">
+										</div>
+									</div>
+								</div>
+								<button type="submit" class="btn btn-primary" id="btnSalvarCategoria" value="">Salvar</button>
+								<a class="btn btn-danger btnExcluirCategoria">Excluir</a>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section>
