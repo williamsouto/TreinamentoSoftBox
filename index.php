@@ -12,7 +12,7 @@ require_once './Config/Base.php';
 require_once './Library/Utilities/Sessao.php';
 
 // Flag para mudar a persistencia dos dados.
-Base::persistencia( 'ARQUIVO' );
+Base::persistencia('ARQUIVO');
 date_default_timezone_set('America/Sao_Paulo');
 
 $session = new Sessao();

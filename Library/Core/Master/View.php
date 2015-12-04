@@ -14,7 +14,7 @@ class View {
 	private $dados = array();
 	public $conteudo;
 	public $mensagem;
-	
+	public $chat;
 	
 	/**
 	 * Retorna o valor da chave passada como parâmetro, caso não passe, retorna todo array.
@@ -66,7 +66,12 @@ class View {
 		}
 
 		if (file_exists("./App/View/{$view}")) {
-
+			
+			ob_start();
+			include "./App/Template/chat.phtml";
+			$this->chat = ob_get_contents();
+			ob_end_clean();
+			
 			ob_start();
 			include "./App/Template/mensagem.phtml";
 			$this->mensagem = ob_get_contents();

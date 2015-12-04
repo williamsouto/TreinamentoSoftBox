@@ -43,12 +43,10 @@ class HomeController extends Controller {
 		exit;
 	}
 	
-	public function login() {
+	public function logout() {
 		
-		
-		
-		var_dump($_POST);
-		exit;
+		session_destroy();
+		header("Location: http://localhost/TreinamentoSoftbox/");
 	}
 	
 }

@@ -35,6 +35,8 @@ $().ready(function() {
 		criarGrafico(data);
 		dataChart = data;
     });
+	
+	$('#chatScroll').slimScroll();
 });
 
 // Eventos
@@ -61,9 +63,11 @@ $('#drop-notificacao').click(function() {
 $('.ponteiro').click(function() {
 
 	if (!collapsad) {
+		
 		$('.menu-lateral').animate({
-							width : "-=169"	
+							width : "-=245"
 		},350, function() {
+			
 			$('.ponteiro > i').removeClass('fa-chevron-circle-left').addClass('fa-chevron-circle-right');
 			
 			var url = (window.location.href).split('/');
@@ -82,7 +86,7 @@ $('.ponteiro').click(function() {
 	} else {
 		
 		$('.menu-lateral').animate({
-			width : "+=169"
+			width : "+=245"
 		}, 350, function() {
 			$('.ponteiro > i').removeClass('fa-chevron-circle-right').addClass('fa-chevron-circle-left');
 			
@@ -95,7 +99,7 @@ $('.ponteiro').click(function() {
 		});
 			
 		$('.ponteiro').animate({
-			left : '15%'
+			left : '19%'
 		}, 350);
 	
 		collapsad = false;
@@ -232,7 +236,7 @@ function animarBanners() {
 
 function deslocaTitulo() {
 	var margin = parseInt($('.navbar-collapse > span').css("margin-left"));
-	margin = margin + 600;
+	margin = margin + 800;
 	
 	$(".navbar-collapse > span").css("margin-left", "-600px").css("position",
 			"relative");

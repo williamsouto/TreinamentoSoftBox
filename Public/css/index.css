@@ -5,11 +5,11 @@
 }
 
 .bg-body {
-	margin: 0px 0px 0px 320px;
+	margin: 0px 0px 0px 400px;
 }
 
 .hide {
- display: none;
+	display: none;
 }
 
 .head-menu {
@@ -33,7 +33,7 @@
 }
 
 .body-mensagem {
-	background-color: #778899;
+	background-color: #4682B4;
 	height: 1000px;
 }
 
@@ -45,11 +45,13 @@
 	background-color: white;
 	margin: 6px 0px 0px 6px;
 	padding: 0px;
+	color: white;
 }
 
 #msgFeeds {
+	color: white;
 	position: relative;
-	margin-top: 12px;
+	margin-top: 20px;
 }
 
 .menu-list a {
@@ -81,17 +83,13 @@
 }
 
 .menu-lateral a {
-	color: white;
+	color: black;
 	border-radius: 30px!important;
 	padding: 6px 9px!important;
 }
 
 .menu-lateral li {
 	overflow: hidden;
-}
-
-.body-mensagem li {
-	border-bottom: 1px solid white;
 }
 
 .menu-list li {
@@ -105,14 +103,15 @@
 
 .menu-lateral {
 	margin: 0px 0px 0px 145px;
-	width: 174px;
+	width: 250px;
 	position: absolute;
 	border-radius: 5px;
 	border-right: 3px double #ffffff;
-	color: white;
+	overflow: hidden;
 }
 
 .ponteiro {
+	color: white!important;
 	background-color: #4682B4;
 	top: 40%!important;
 	left: 15.3%;
@@ -120,6 +119,7 @@
 	float: right;
 	margin-right: -10px;
 	z-index: 2;
+	left : 19%;
 }
 
 .active {
@@ -279,8 +279,8 @@
 
 .head-mensagem span.badge{
 	position: absolute;
-	top: -10%;
-	left: 22%;
+	top: -6%;
+	left: 71%;
 }
 
 .fadeInNotf li.bg-success {
@@ -539,23 +539,7 @@
 }
 
 
-.animation-delay1 {
-  animation-delay: 0.1s;
-  -webkit-animation-delay: 0.1s;
-  -moz-animation-delay: 0.1s;
-  -ms-animation-delay: 0.1s;
-  -o-animation-delay: 0.1s;
-  animation-timing-function: ease;
-  -webkit-animation-timing-function: ease;
-  -moz-animation-timing-function: ease;
-  -ms-animation-timing-function: ease;
-  -o-animation-timing-function: ease;
-  animation-fill-mode: both;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-}
+
 
 @media (max-width: 480px) {
   .login-wrapper .login-widget {
@@ -646,6 +630,24 @@
   }
 }
 
+.animation-delay1 {
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  -ms-animation-delay: 0.1s;
+  -o-animation-delay: 0.1s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+}
+
 .animation-delay2 {
   animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s;
@@ -664,7 +666,7 @@
   -o-animation-fill-mode: both;
 }
 
-.animation-delay4 {
+.animation-delay3 {
   animation-delay: 0.7s;
   -webkit-animation-delay: 0.7s;
   -moz-animation-delay: 0.7s;
@@ -680,4 +682,133 @@
   -moz-animation-fill-mode: both;
   -ms-animation-fill-mode: both;
   -o-animation-fill-mode: both;
+}
+
+.animation-delay4 {
+  animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+  -moz-animation-delay: 0.9s;
+  -ms-animation-delay: 0.9s;
+  -o-animation-delay: 0.9s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+}
+
+.chat {
+  list-style: none;
+  margin: 0;
+  padding-left: 0px!important;
+}
+.chat li {
+  margin: 15px 0;
+}
+
+.chat li:first-child {
+  margin-top: 0;
+}
+
+.chat li.left .chat-body {
+  margin-left: 70px;
+  background-color: #fff;
+}
+
+.chat li.right .chat-body {
+  margin-right: 70px;
+  background-color: #fff;
+}
+
+.chat li.right .chat-body:before {
+  position: absolute;
+  top: 10px;
+  right: -8px;
+  display: inline-block;
+  background: #fff;
+  width: 16px;
+  height: 16px;
+  border-top: 1px solid #f1f5fc;
+  border-right: 1px solid #f1f5fc;
+  content: '';
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.chat li.left .chat-body:before {
+  position: absolute;
+  top: 10px;
+  left: -8px;
+  display: inline-block;
+  background: #fff;
+  width: 16px;
+  height: 16px;
+  border-top: 1px solid #f1f5fc;
+  border-left: 1px solid #f1f5fc;
+  content: '';
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+.chat li img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50em;
+  -moz-border-radius: 50em;
+  -webkit-border-radius: 50em;
+}
+.chat li .chat-body {
+  position: relative;
+  font-size: 11px;
+  padding: 10px;
+  border: 1px solid #f1f5fc;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.chat li .chat-body .header {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #f1f5fc;
+}
+.chat li .chat-body p {
+  margin: 0;
+}
+
+.primary-font {
+  color: #3c8dbc;
+}
+
+.refresh {
+	text-decoration: none!important;
+}
+
+.btn-cadastro {
+	background-color: #00AFFF;
+	border-color: #00ADFF;
+	color: white;
+	font: bold;
+	font-weight: bold;
+}
+
+.btn-cadastro:hover{
+	background-color: #1A99FF;
+	color: white;
+	font: bold;
+	font-weight: bold;
+}
+
+.bg-success {
+  background-color: #9ad268;
+  color: #fff;
 }
