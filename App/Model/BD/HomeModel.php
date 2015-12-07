@@ -30,6 +30,7 @@ class HomeModel {
 					FROM TBLancamento 
 					WHERE DT_LANC BETWEEN DATE_SUB(CURRENT_DATE(),INTERVAL (EXTRACT(DAY FROM CURRENT_DATE())-1) DAY) AND LAST_DAY(CURRENT_DATE())
 					GROUP BY TIPO";
+		
 		$cmd = $this->connection->prepare($query);
 		$cmd->execute();
 	
@@ -40,7 +41,7 @@ class HomeModel {
 		
 		$query = "SELECT TIPO, DT_LANC, SUM(VALOR) AS VALOR
 					FROM TBLancamento 
-					GROUP BY TIPO, DT_LANC";
+					GROUP BY TIPO, EXTRACT(YEAR_MONTH FROM DT_LANC)";
 		
 		$cmd = $this->connection->prepare($query);
 		$cmd->execute();

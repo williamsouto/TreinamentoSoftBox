@@ -6,12 +6,15 @@ class HomeController extends Controller {
 		
 		$model = $this->criarModelo('Home');
 		$data = $model->getSumLancamentos();
+        
+		$despesa = ($data[0]['TIPO'] == 'D') ? $data[0] : $data[1];
+		$receita = ($data[0]['TIPO'] == 'R') ? $data[0] : $data[1];
 		
 		// Informações passadas como parâmetros, para serem renderizadas e exibidas no dashboard.
-		$this->view->set('receitas', $data[1]['SOMA']);
-		$this->view->set('despesas', $data[0]['SOMA']);
-		$this->view->set('total', ($data[1]['SOMA'] - $data[0]['SOMA']));
-		$this->view->set('quantidade', ($data[0]['QUANTIDADE'] + $data[1]['QUANTIDADE']));
+		$this->view->set('receitas', $receita['SOMA']);
+		$this->view->set('despesas', $despesa['SOMA']);
+		$this->view->set('total', ($receita['SOMA'] - $despesa['SOMA']));
+		$this->view->set('quantidade', ($despesa['QUANTIDADE'] + $receita['QUANTIDADE']));
 		$this->view->set('titulo', 'Home');
 		$this->view->render('index.phtml');
 	}
@@ -21,16 +24,29 @@ class HomeController extends Controller {
 		$model = $this->criarModelo('Home');
 		$data = $model->getChartLancamentos();
 		
-		$receitas = array('name' => 'Receitas');
-		$despesas = array('name' => 'Despesas');
+		$receitas = array(
+		    'name' => 'Receitas',    
+		    'data' => array(0 => 0, 1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0, 
+		                      6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0)
+		);
+		
+		$despesas = array(
+		    'name' => 'Despesas',
+		    'data' => array(0 => 0, 1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0, 
+		                      6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0)
+		);
 		
 		// É construido um array de despesas e receitas, no qual cada item, possui os valor somado do mês.
 		foreach ($data as $key => $value) {
 			
+		    // É retirado o mes da data, para ser utilizado como chave no array associativo.
+		    $pos = substr($value['DT_LANC'], 5, 2);
+		    $pos = ($pos == '10') ? $pos - 1 : (str_replace('0','',$pos)) - 1;
+		    
 			if ($value['TIPO'] == 'R') {
-				$receitas['data'][] = $value['VALOR'];
+				$receitas['data'][$pos] = $value['VALOR'];
 			} else {
-				$despesas['data'][] = $value['VALOR'];
+				$despesas['data'][$pos] = $value['VALOR'];
 			}
 		}
 		

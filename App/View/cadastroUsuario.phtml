@@ -1,16 +1,45 @@
 <div class="row">
 	<div class="col-md-2"></div>
 	<div class="col-md-8">
-		<div class="panel panel-default bg-success">
+		<div class="panel panel-default bg-blue">
 			<div class="panel-body">
-				<img src="./Public/img/perfil.jpg" class="img-circle pull-left" alt="Avatar">
-				
-				<div class="pull-left" style="margin-left: 15px;">
-					<strong class="font-16">Cadastro</strong><br />
+				<div class="pull-left">
+					<strong class="font-18">Cadastro de Usu&aacute;rio</strong><br />
 				</div>
 			</div>
-			
-			<!-- /list-group -->
+
+			<div class="panel panel-default">
+				<form class="no-margin form-usuario" id="cadastroUsuario" method="post">
+					<div class="panel-heading">Preencha os campos e clique em salvar.</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<label class="control-label">Usu&aacute;rio</label> <input type="text" placeholder="Digite o nome de usu&aacute;rio..." class="form-control input-sm" required>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="control-label">Senha</label> <input type="password" placeholder="Digite sua senha..." class="form-control input-sm" id="password" required>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="control-label">Confirme a senha</label> <input type="password" placeholder="Confirme a senha..." class="form-control input-sm" required>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label">Email</label> <input type="email" class="form-control input-sm" placeholder="exemplo@email.com" required >
+						</div>
+					</div>
+					<div class="panel-footer text-right">
+						<button type="submit" class="btn btn-warning">Salvar</button>
+						<a href="http://localhost/TreinamentoSoftbox/" class="btn btn-default btnVoltar">Voltar</a>
+					</div>
+				</form>
+			</div>
+
 		</div>
 	</div>
 	<div class="col-md-2"></div>

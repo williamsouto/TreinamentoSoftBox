@@ -147,7 +147,7 @@ function criarGrafico(data) {
         },
         title: {
             text: 'Receitas vs. Despesas',
-            x: -20 //center
+            x: -20
         },
         subtitle: {
             text: 'Ano 2015',

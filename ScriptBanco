@@ -1,0 +1,62 @@
+
+CREATE DATABASE treinamento;
+
+USE treinamento;
+
+CREATE TABLE TBCategoria
+(
+	ID_CATEG MEDIUMINT AUTO_INCREMENT,
+	NOME VARCHAR(30),
+	CONSTRAINT PK_TBCategoria_ID_CATEG PRIMARY KEY (ID_CATEG)
+);
+
+CREATE TABLE TBLancamento
+(
+	ID_LANC MEDIUMINT AUTO_INCREMENT,
+	DESCRICAO VARCHAR(100),
+	VALOR DECIMAL(18,2),
+	DT_LANC DATETIME,
+	ID_CATEG MEDIUMINT,
+	TIPO CHAR,
+	CONSTRAINT PK_TBLancamento_ID_LANC PRIMARY KEY (ID_LANC),
+	CONSTRAINT FK_TBLancamento_ID_CATEG FOREIGN KEY (ID_CATEG) REFERENCES TBCategoria(ID_CATEG)
+);
+
+
+INSERT INTO `tbcategoria` (`ID_CATEG`, `NOME`) VALUES
+(22, 'Conta Salário'),
+(29, 'Poupança'),
+(30, 'Conta Universitária'),
+(31, 'Conta Corrente');
+
+
+INSERT INTO `tblancamento` (`ID_LANC`, `DESCRICAO`, `VALOR`, `DT_LANC`, `ID_CATEG`, `TIPO`) VALUES
+(52, 'teste', '14.54', '2015-10-10 00:00:00', 22, 'R'),
+(63, 'testando 5', '57.48', '2015-12-15 00:00:00', 22, 'R'),
+(64, 'testando 5', '5.45', '2015-10-10 00:00:00', 29, 'R'),
+(65, 'Pagamento do consórcio', '221.73', '2015-09-08 00:00:00', 22, 'D'),
+(66, 'Empréstimo que foi realizado para o João Neto na data de 26/11/2014.', '221.11', '2015-01-15 00:00:00', 29, 'R'),
+(67, 'Salário.', '2.80', '2015-01-06 00:00:00', 22, 'R'),
+(68, 'Troca de óleo do motor.', '64.90', '2015-01-10 00:00:00', 22, 'D'),
+(69, 'Passagem para Uberaba.', '209.11', '2015-01-19 00:00:00', 22, 'D'),
+(70, 'Restaurante Bom Sabor.', '28.00', '2015-02-12 00:00:00', 31, 'D'),
+(71, 'Gasolina.', '120.00', '2015-02-12 00:00:00', 31, 'D'),
+(72, 'Depósito da Vanessa.', '421.00', '2015-03-13 00:00:00', 29, 'R'),
+(73, 'Pagamento cinema.', '218.00', '2015-03-17 00:00:00', 22, 'R'),
+(74, 'Auto-escola.', '170.00', '2015-04-14 00:00:00', 29, 'D'),
+(75, 'Calçado esportivo.', '322.39', '2015-05-02 00:00:00', 22, 'D'),
+(76, 'Camiseta polo.', '87.00', '2015-05-11 00:00:00', 22, 'D'),
+(77, 'Deposito do Bruno.', '220.00', '2015-06-28 00:00:00', 29, 'R'),
+(78, 'Deposito do Bruno.', '180.00', '2015-06-29 00:00:00', 29, 'R'),
+(79, 'Pagamento auto-escola.', '57.00', '2015-07-01 00:00:00', 22, 'D'),
+(80, 'Licenciamento do veículo', '89.00', '2015-07-08 00:00:00', 22, 'D'),
+(81, 'Seguro do veículo.', '320.00', '2015-07-14 00:00:00', 22, 'D'),
+(82, 'Empréstimo recebido.', '580.00', '2015-07-14 00:00:00', 29, 'R'),
+(83, 'Pagamento segunda parcela do seguro do veículo.', '800.00', '2015-09-03 00:00:00', 31, 'D'),
+(84, 'Deposito Fabiana.', '444.00', '2015-10-16 00:00:00', 29, 'R'),
+(85, 'Restaurante.', '80.00', '2015-10-21 00:00:00', 30, 'R'),
+(86, 'Salario.', '2.80', '2015-11-06 00:00:00', 22, 'R'),
+(88, 'Compras.', '80.00', '2015-01-10 00:00:00', 22, 'D'),
+(89, 'Restaurante.', '220.00', '2015-08-04 00:00:00', 29, 'D'),
+(91, 'Restaurante.', '20.00', '2015-12-03 00:00:00', 22, 'D'),
+(92, 'Supermecado.', '120.00', '2015-12-04 00:00:00', 30, 'D');

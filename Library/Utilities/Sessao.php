@@ -33,7 +33,7 @@ class Sessao {
                 
                 ob_start();
                 include './App/View/cadastroUsuario.phtml';
-                $this->titulo = 'Cadastro de usuário';
+                $this->titulo = 'Cadastro de Usu&aacute;rio';
                 $this->conteudo = ob_get_contents();
                 ob_end_clean();
                 

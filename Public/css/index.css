@@ -261,12 +261,12 @@
 }
 
 .panel-inverse > .panel-heading {
-	background-color: #778899;
+	background-color: #4682B4;
 	color: white;
 }
 
 .panel-inverse {
-	border-color: #778899; 
+	border-color: #4682B4; 
 }
 
 .panel-inverse > .panel-heading > a {
@@ -808,7 +808,17 @@
 	font-weight: bold;
 }
 
-.bg-success {
-  background-color: #9ad268;
+.bg-blue {
+  background-color: #4682B4;
   color: #fff;
 }
+
+.font-18 {
+  font-size: 16px !important;
+  margin-left: 18px;
+}
+
+.form-usuario {
+	color: #696969;
+}
+

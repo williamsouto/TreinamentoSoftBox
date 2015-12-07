@@ -11,8 +11,8 @@ require_once "./Library/Utilities/Inflector.php";
 require_once './Config/Base.php';
 require_once './Library/Utilities/Sessao.php';
 
-// Flag para mudar a persistencia dos dados.
-Base::persistencia('ARQUIVO');
+// Flag para mudar a persistencia dos dados (ARQUIVO OU BD).
+Base::persistencia('BD');
 date_default_timezone_set('America/Sao_Paulo');
 
 $session = new Sessao();
